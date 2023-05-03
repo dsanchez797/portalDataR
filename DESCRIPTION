@@ -1,0 +1,14 @@
+Package: portalDataR
+Type: Package
+Title: Hold and analyses data for the Portal Project in Arizona
+Version: 0.1.0
+Authors@R: person("Damian A.", "Sanchez", email = "dsanchez79@ucmerced.edu", role = c("aut", "cre"))
+Maintainer: Damian A. Sanchez <dsanchez79@ucmerced.edu>
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: GPL (>=2)
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 4.2.2)
+RoxygenNote: 7.2.3
