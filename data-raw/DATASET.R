@@ -4,14 +4,10 @@
 # this last function saves the object in R format
 usethis::use_data(DATASET, overwrite = TRUE)
 
-function.portal <- read.csv( file = "../data-raw/portal-species-taxonomy.csv")
-library(usethis)
-use_data(function.portal, overwrite = TRUE)
-str(function.portal)
-nrow(function.portal)
-colnames(function.portal)
+# Rx resistance
+Rxresistance <- read.csv(file = "../data-raw/metadata.csv")
+head(Rxresistance)
+colnames(Rxresistance)
+rownames(Rxresistance)
+library(pkgdown)
 
-install.packages("devtools")
-library(devtools)
-document()
-getwd()
