@@ -34,7 +34,7 @@ na.omit(Rxresistance)
 ```
 
 ```{r}
-dna_seqs <- Rxresistance$Sequence
+dna_seqs <- Rxresistance$Continent
 
 library(Biostrings)
 # Create DNAStringSet object
