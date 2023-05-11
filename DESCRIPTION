@@ -1,11 +1,10 @@
 Package: portalDataR
 Type: Package
-Title: Hold and analyses data for the Portal Project in Arizona
+Title: Antibiotic resistance in Neisseria Gonorrheae
 Version: 0.1.0
 Authors@R: person("Damian A.", "Sanchez", email = "dsanchez79@ucmerced.edu", role = c("aut", "cre"))
 Maintainer: Damian A. Sanchez <dsanchez79@ucmerced.edu>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Description: Observing the rates of resisatnce to antibiotics in Neisseria Gonorrheae
 License: GPL (>=2)
 Encoding: UTF-8
 LazyData: true
