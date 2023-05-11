@@ -15,5 +15,39 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(portalDataR)
+library(dplyr)
+library(ggplot2)
+library(ape)
+library(rotl)
+library(remotes)
+library(datelife)
+
+
 ```
+
+```{r}
+Rxresistance <- read.csv(file = "../data-raw/metadata.csv")
+head(Rxresistance)
+colnames(Rxresistance)
+rownames(Rxresistance)
+na.omit(Rxresistance)
+```
+
+```{r}
+dna_seqs <- Rxresistance$Sequence
+
+library(Biostrings)
+# Create DNAStringSet object
+seqs <- DNAStringSet(dna_seqs)
+
+# Calculate distance matrix
+dist_matrix <- dist.dna(seqs)
+
+# Build tree using maximum likelihood
+tree <- pml(dist_matrix, model="HKY85")
+
+# Visualize tree
+plot(tree)
+
+```
+

@@ -1,0 +1,39 @@
+---
+title: "full_data"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{full_data}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r}
+Rxresistance <- read.csv(file = "../data-raw/metadata.csv")
+na.omit(Rxresistance)
+```
+```{r}
+summary(Rxresistance)
+```
+
+```{r}
+plot(Rxresistance$Azithromycin~Rxresistance$Ceftriaxone, xlab = "Ceftraixone resistance", ylab=" Azithromycin resistance", main = "Ceftraixone vs Azithromycin", col = "red")
+
+
+
+```
+
+```{r}
+plot(Rxresistance$Tetracycline~Rxresistance$Cefixime, xlab = "Cefixime resistance", ylab=" Tetracycline resistance", main = "Cefixime vs Tetracycline", col = "blue")
+```
+
+```{r}
+plot(Rxresistance$Penicillin~Rxresistance$Beta.lactamase, xlab = "Beta lactamase resistance", ylab=" Penicillin resistance", main = "Penicillin vs Beta lactamase", col = "green")
+```
+

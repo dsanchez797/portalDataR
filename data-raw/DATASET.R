@@ -15,3 +15,5 @@ library(devtools)
 use_data(Rxresistance, overwrite = TRUE)
 
 use_vignette(name = "Rx_resistance")
+use_vignette(name = "full_data")
+
