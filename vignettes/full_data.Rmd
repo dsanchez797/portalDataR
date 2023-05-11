@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 ```{r}
 Rxresistance <- read.csv(file = "../data-raw/metadata.csv")
-na.omit(Rxresistance)
+
 ```
 ```{r}
 summary(Rxresistance)
@@ -35,5 +35,9 @@ plot(Rxresistance$Tetracycline~Rxresistance$Cefixime, xlab = "Cefixime resistanc
 
 ```{r}
 plot(Rxresistance$Penicillin~Rxresistance$Beta.lactamase, xlab = "Beta lactamase resistance", ylab=" Penicillin resistance", main = "Penicillin vs Beta lactamase", col = "green")
+```
+
+```{r}
+
 ```
 

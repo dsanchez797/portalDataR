@@ -1,5 +1,5 @@
 
-# portalDataR
+# Antibiotic Resistance in Neisseria
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -9,9 +9,7 @@ The dataset contains phenotype data that will be used to predict microbial resis
 # Why did I choose this dataset
 I chose this dataset, because neisseria gonorrheae, an acute bacterium that causes gonorrheae in humans, is relatively difficult to cultivate and study due to its specific environmental conditions it requires. By predicting antibiotic resistance, we can recognize whether evolutionary mechanisms like horizontal gene transfer or genetic expression is the critical factor in microbial resistance.
 
-png(file = "figure1.png", width = 800, height = 600, res = 120)
-plot(x = 1:10, y = rnorm(10))
-dev.off()
+![]run/figure/figure1.png
 
 
 # From the dataset that I chose
