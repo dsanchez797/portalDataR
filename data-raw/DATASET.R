@@ -11,6 +11,7 @@ colnames(Rxresistance)
 rownames(Rxresistance)
 library(pkgdown)
 library(usethis)
-usethis()
+library(devtools)
+use_data(Rxresistance, overwrite = TRUE)
 
 use_vignette(name = "Rx_resistance")
