@@ -1,0 +1,40 @@
+---
+title: "neisseria_tree"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{neisseria_tree}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(ape)
+library(rotl)
+library(remotes)
+library(datelife)
+```
+
+```{r}
+Rxresistance <- read.csv(file = "../data-raw/metadata.csv")
+head(Rxresistance)
+colnames(Rxresistance)
+rownames(Rxresistance)
+na.omit(Rxresistance)
+```
+
+```{r, fig.height = 22, fig.width = 15}
+tre1 <- read.tree(file = "../data-raw/segata_2013.tre")
+plot(tre1, cex = 0.1)
+mtext(text = "Segata 2013 OpenTree tree")
+```
+
