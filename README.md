@@ -9,7 +9,6 @@ The dataset contains phenotype data that will be used to predict microbial resis
 # Why did I choose this dataset
 I chose this dataset, because neisseria gonorrheae, an acute bacterium that causes gonorrheae in humans, is relatively difficult to cultivate and study due to its specific environmental conditions it requires. By predicting antibiotic resistance, we can recognize whether evolutionary mechanisms like horizontal gene transfer or genetic expression is the critical factor in microbial resistance.
 
-![]run/figure/figure1.png
 
 
 # From the dataset that I chose

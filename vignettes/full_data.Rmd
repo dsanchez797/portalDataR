@@ -14,30 +14,27 @@ knitr::opts_chunk$set(
 )
 ```
 
+
 ```{r}
 Rxresistance <- read.csv(file = "../data-raw/metadata.csv")
-
 ```
+
 ```{r}
 summary(Rxresistance)
 ```
 
 ```{r}
-plot(Rxresistance$Azithromycin~Rxresistance$Ceftriaxone, xlab = "Ceftraixone resistance", ylab=" Azithromycin resistance", main = "Ceftraixone vs Azithromycin", col = "red")
+plot(Rxresistance$Penicillin~Rxresistance$Year, xlab = "Year", ylab="Penicillin-resistant isolates in %", main = "Penicillin vs Year", col = "red") +
+  geom_line()
 
 
 
 ```
 
 ```{r}
-plot(Rxresistance$Tetracycline~Rxresistance$Cefixime, xlab = "Cefixime resistance", ylab=" Tetracycline resistance", main = "Cefixime vs Tetracycline", col = "blue")
+plot(Rxresistance$Tetracycline~Rxresistance$Year, xlab = "Year", ylab="Tetracycline-resistant isolates in %", main = "Tetracycline vs Year", col = "blue")
 ```
 
-```{r}
-plot(Rxresistance$Penicillin~Rxresistance$Beta.lactamase, xlab = "Beta lactamase resistance", ylab=" Penicillin resistance", main = "Penicillin vs Beta lactamase", col = "green")
-```
+# Looking at the two graphs presented, which depict the percentage of resistant isolates from 1980 to 2014, we can see that a narrow spectrum antibiotic like Penicillin has a higher percentage in years between 2000 and 2010 while a broad spectrum antibiotic like Tetracycline has higher percentages in 2010s. This would make sense because broad spectrum antibiotics typically generate selective pressure against the bacteria, causing them to mutate or transfer resistant inducing genes meanwhile, not so common antibiotics like Penicillin are more effective.
 
-```{r}
-
-```
 
