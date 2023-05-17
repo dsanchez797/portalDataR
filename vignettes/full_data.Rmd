@@ -17,6 +17,7 @@ knitr::opts_chunk$set(
 
 ```{r}
 Rxresistance <- read.csv(file = "../data-raw/metadata.csv")
+library(ggplot2)
 ```
 
 ```{r}
@@ -37,4 +38,8 @@ plot(Rxresistance$Tetracycline~Rxresistance$Year, xlab = "Year", ylab="Tetracycl
 
 # Looking at the two graphs presented, which depict the percentage of resistant isolates from 1980 to 2014, we can see that a narrow spectrum antibiotic like Penicillin has a higher percentage in years between 2000 and 2010 while a broad spectrum antibiotic like Tetracycline has higher percentages in 2010s. This would make sense because broad spectrum antibiotics typically generate selective pressure against the bacteria, causing them to mutate or transfer resistant inducing genes meanwhile, not so common antibiotics like Penicillin are more effective.
 
+```{r, FALSE}
+ggplot(data = Rxresistance, mapping = aes(x = Year, y= Tetracycline, color = Tetracycline)) + 
+  geom_point(size = 3, alpha = 0.5)
+```
 
